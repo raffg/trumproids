@@ -41,7 +41,7 @@ class ImageInfo:
         return self.animated
 
     
-# art assets created by Kim Lathrop, may be freely re-used in non-commercial projects, please credit Kim
+# the following art assets created by Kim Lathrop, may be freely re-used in non-commercial projects, please credit Kim
 
 # debris images - debris1_brown.png, debris2_brown.png, debris3_brown.png, debris4_brown.png
 #                 debris1_blue.png, debris2_blue.png, debris3_blue.png, debris4_blue.png, debris_blend.png
@@ -52,10 +52,6 @@ debris_image = simplegui.load_image("http://commondatastorage.googleapis.com/cod
 nebula_info = ImageInfo([400, 300], [800, 600])
 nebula_image = simplegui.load_image("http://commondatastorage.googleapis.com/codeskulptor-assets/lathrop/nebula_blue.f2014.png")
 
-# splash image
-splash_info = ImageInfo([200, 150], [400, 300])
-splash_image = simplegui.load_image("https://www.dropbox.com/s/0uk5o4k4bhznybw/TrumpRoids.png?dl=1")
-
 # ship image
 ship_info = ImageInfo([45, 45], [90, 90], 35)
 ship_image = simplegui.load_image("http://commondatastorage.googleapis.com/codeskulptor-assets/lathrop/double_ship.png")
@@ -64,21 +60,27 @@ ship_image = simplegui.load_image("http://commondatastorage.googleapis.com/codes
 missile_info = ImageInfo([5,5], [10, 10], 3, 50)
 missile_image = simplegui.load_image("http://commondatastorage.googleapis.com/codeskulptor-assets/lathrop/shot2.png")
 
-#tomato image
-tomato_info = ImageInfo([15, 15], [30, 30], 10, 100)
-tomato_image = simplegui.load_image("https://www.dropbox.com/s/xfisgncg84ju5jw/tomato.png?dl=1")
-
 # asteroid images - asteroid_blue.png, asteroid_brown.png, asteroid_blend.png
 asteroid_info = ImageInfo([45, 45], [90, 90], 40)
 asteroid_image = simplegui.load_image("http://commondatastorage.googleapis.com/codeskulptor-assets/lathrop/asteroid_blue.png")
 
-# Trump image
-trump_info = ImageInfo([45, 45], [90, 90], 40)
-trump_image = simplegui.load_image("https://www.dropbox.com/s/eso7ezfdae57t5h/Trump.png?dl=1")
-
 # animated explosion - explosion_orange.png, explosion_blue.png, explosion_blue2.png, explosion_alpha.png
 explosion_info = ImageInfo([64, 64], [128, 128], 17, 24, True)
 explosion_image = simplegui.load_image("http://commondatastorage.googleapis.com/codeskulptor-assets/lathrop/explosion_alpha.png")
+
+# the following art assets created by Greg Rafferty, may be freely re-used in non-commercial projects, please credit Greg
+
+# splash image
+splash_info = ImageInfo([200, 150], [400, 300])
+splash_image = simplegui.load_image("https://www.dropbox.com/s/0uk5o4k4bhznybw/TrumpRoids.png?dl=1")
+
+#tomato image
+tomato_info = ImageInfo([15, 15], [30, 30], 10, 100)
+tomato_image = simplegui.load_image("https://www.dropbox.com/s/xfisgncg84ju5jw/tomato.png?dl=1")
+
+# Trump image
+trump_info = ImageInfo([45, 45], [90, 90], 40)
+trump_image = simplegui.load_image("https://www.dropbox.com/s/eso7ezfdae57t5h/Trump.png?dl=1")
 
 # sound assets purchased from sounddogs.com, please do not redistribute
 soundtrack = simplegui.load_sound("http://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/soundtrack.mp3")
@@ -223,7 +225,7 @@ def draw(canvas):
     canvas.draw_text("Lives " + str(lives), [50, 50], 22, "White", "sans-serif")
     canvas.draw_text("Score " + str(score), [680, 50], 22, "White", "sans-serif")
     
-    # graw splash screen if not started
+    # draw splash screen if not started
     if not started :
         canvas.draw_image(splash_image, splash_info.get_center(), splash_info.get_size(), 
                           [WIDTH / 2, HEIGHT / 2], [WIDTH / 2, HEIGHT / 2])
